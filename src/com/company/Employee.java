@@ -13,6 +13,11 @@ public class Employee {
         this.employeeID++;
     }
 
+    Employee(String name, int employeeID) {
+        this.name = name;
+        this.employeeID = employeeID;
+    }
+
     public double getBaseSalaty() {
         return baseSalaty;
     }
@@ -30,7 +35,7 @@ public class Employee {
     }
 
     public Employee getManager(){
-        return new Employee(this.name, this.baseSalaty);
+        return new Employee(this.name, this.employeeID);
     }
 
     public boolean equals(Employee other){
